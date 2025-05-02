@@ -1,8 +1,8 @@
-Train Reservation System (Flask + MySQL)
+# Train Reservation System (Flask + MySQL)
 A lightweight demonstration web app that lets passengers search trains, book seats, and view reservations, while staff can manage bookings and run simple operational reports.
 Built with Python 3 / Flask / SQLAlchemy / MySQL and styled with Bootstrap 5.
 
-✨ Key features
+# ✨ Key features
 Role-based sessions – mock login for passenger, staff, or guest via /auth/* routes.
 
 Passenger workflow
@@ -21,14 +21,14 @@ Bootstrap templates rendered by helper render_page() for quick, responsive UI.
 
 Seed SQL scripts (ICS321TABLES.sql, ICS321Triggers.sql, DBDATA.sql) to create tables, triggers, and demo data.
 
-🗄️ Tech stack
+# 🗄️ Tech stack
 Layer	Library / Tool
 Backend	Python 3.x, Flask, Flask-SQLAlchemy
 DB	MySQL 8 / MariaDB (mysql+pymysql driver)
 Front-end	HTML + Bootstrap 5
 ORM models	Defined in models.py
 
-⚙️ Local setup
+# ⚙️ Local setup
 Clone the repo
 
 bash
@@ -75,10 +75,10 @@ Run the server
 bash
 Copy code
 python app.py
-# or: flask --app app run --debug
+or: flask --app app run --debug
 Visit http://127.0.0.1:5000/.
 
-🏃‍♂️ Quick tour
+# 🏃‍♂️ Quick tour
 URL	Description
 /	Landing page with links to log in as Passenger, Staff, or continue as Guest. 
 
@@ -89,7 +89,7 @@ URL	Description
 
 All sessions are mocked for demo purposes—there is no password logic yet. Log out anytime via /auth/logout.
 
-🧬 Project structure
+# 🧬 Project structure
 graphql
 Copy code
 .
@@ -103,7 +103,8 @@ Copy code
 ├─ ICS321TABLES.sql     # CREATE TABLE statements
 ├─ ICS321Triggers.sql   # Triggers for business rules
 └─ DBDATA.sql           # Sample data
-🛠️ Extending the app
+
+# 🛠️ Extending the app
 Replace the mock logins with real authentication (Flask-Login, JWT, or OAuth).
 
 Add seat-availability checks before booking.
@@ -114,8 +115,8 @@ Containerise with Docker and use environment variables for secrets.
 
 Write unit tests with pytest and a SQLite in-memory DB.
 
-📜 License
+# 📜 License
 This project is released for educational purposes under the KFUPM License. Feel free to fork, improve, and share!
 
-🙋‍♀️ Support / questions
-Open an issue on the repository or contact Faisal at your-email@example.com. Pull requests are welcome!
+# 🙋‍♀️ Support / questions
+Open an issue on the repository or contact Faisal at FaisalAlhmedi@hotmail.com. Pull requests are welcome!
