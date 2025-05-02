@@ -22,36 +22,34 @@ Bootstrap templates rendered by helper render_page() for quick, responsive UI.
 Seed SQL scripts (ICS321TABLES.sql, ICS321Triggers.sql, DBDATA.sql) to create tables, triggers, and demo data.
 
 # 🗄️ Tech stack
-Layer	Library / Tool
-Backend	Python 3.x, Flask, Flask-SQLAlchemy
-DB	MySQL 8 / MariaDB (mysql+pymysql driver)
-Front-end	HTML + Bootstrap 5
-ORM models	Defined in models.py
+
+| Layer       | Library / Tool                                   |
+|-------------|--------------------------------------------------|
+| **Backend** | Python 3.x, **Flask**, **Flask-SQLAlchemy**      |
+| **DB**      | MySQL 8 / MariaDB (`mysql+pymysql` driver)       |
+| **Front-end** | HTML + Bootstrap 5                             |
+| **ORM models** | Defined in `models.py`                        |
+
 
 # ⚙️ Local setup
-Clone the repo
 
-bash
-Copy code
-git clone https://github.com/<you>/TrainReservation.git
-cd TrainReservation
-Create a virtual environment
+1. **Clone the repo**
 
-bash
-Copy code
+   ```bash
+   git clone https://github.com/<you>/TrainReservation.git
+   cd TrainReservation
+
+2. ** Create a virtual environment **
+
+ ```bash
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 Install dependencies
-
-bash
-Copy code
 pip install flask flask-sqlalchemy pymysql
-(Optionally export a requirements.txt later with pip freeze > requirements.txt.)
+(Optionally export a requirements file later with pip freeze > requirements.txt.)
 
-Configure MySQL
+#Configure MySQL
 
-bash
-Copy code
 mysql -u root -p
 CREATE DATABASE train_reservation_db;
 USE train_reservation_db;
@@ -62,21 +60,18 @@ Edit the DB URI
 
 The default URI in db.py is:
 
-python
-Copy code
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1212@localhost/train_reservation_db'
-Change root:1212@localhost to match your MySQL credentials/host. 
+#Replace root:1212@localhost with your own MySQL credentials/host.
+#Tip: set DATABASE_URL in your shell and read it in db.py to avoid hard-coding passwords.
 
+#Run the server
 
-Tip: set DATABASE_URL in your shell and read it in db.py to avoid hard-coding passwords.
-
-Run the server
-
-bash
-Copy code
 python app.py
-or: flask --app app run --debug
-Visit http://127.0.0.1:5000/.
+# or
+flask --app app run --debug
+Then open http://127.0.0.1:5000/ in your browser.
+```
 
 # 🏃‍♂️ Quick tour
 URL	Description
