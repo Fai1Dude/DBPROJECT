@@ -91,17 +91,25 @@ All sessions are mocked for demo purposes—there is no password logic yet. Log 
 
 # 🧬 Project structure
 graphql
-Copy code
-.
+
 ├─ app.py               # App factory & blueprint registration
+
 ├─ auth.py              # Simple login/logout routes
+
 ├─ passenger.py         # Passenger UI & actions
+
 ├─ staff.py             # Staff admin UI & actions
+
 ├─ models.py            # SQLAlchemy table mappings
+
 ├─ db.py                # DB init & URI
+
 ├─ utils.py             # Shared HTML template helper
+
 ├─ ICS321TABLES.sql     # CREATE TABLE statements
+
 ├─ ICS321Triggers.sql   # Triggers for business rules
+
 └─ DBDATA.sql           # Sample data
 
 # 🛠️ Extending the app
